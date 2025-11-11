@@ -1,0 +1,3 @@
+spring:
+  liquibase:
+    change-log: dbrate.changelog/changelog.xml

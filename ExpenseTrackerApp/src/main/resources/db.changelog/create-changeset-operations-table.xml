@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.15.xsd">
+
+    <changeSet id="1-create-operations-table" author="kirichenkods">
+        <createTable tableName="operations" schemaName="public">
+            <column name="id" type="UUID">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+
+            <column name="amount" type="NUMERIC(11,2)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="is_income" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="operation_date" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="category" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="comment" type="TEXT">
+            </column>
+
+            <column name="user_id" type="UUID">
+                <constraints nullable="false"
+                             foreignKeyName="fk_operations_user"
+                             references="public.users(id)"/>
+            </column>
+        </createTable>
+
+        <createIndex tableName="operations" indexName="idx_operations_category">
+            <column name="category"/>
+        </createIndex>
+    </changeSet>
+</databaseChangeLog>

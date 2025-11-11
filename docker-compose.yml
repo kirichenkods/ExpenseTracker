@@ -1,0 +1,11 @@
+services:
+  postgres:
+    container_name: currencyPG
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: "currency_db"
+      POSTGRES_USER: "curuser"
+      POSTGRES_PASSWORD: "securpas"
+    ports:
+      - "5432:5432"
