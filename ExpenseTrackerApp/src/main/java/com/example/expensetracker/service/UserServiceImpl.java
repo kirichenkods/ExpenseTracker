@@ -2,11 +2,13 @@ package com.example.expensetracker.service;
 
 import com.example.expensetracker.dto.UserDTO;
 import com.example.expensetracker.entity.User;
+import com.example.expensetracker.exception.UserNotFoundException;
 import com.example.expensetracker.mapper.UserMapper;
 import com.example.expensetracker.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -29,12 +31,16 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void updateUser(UserDTO userDTO) {
-        repository.updateUserName(userDTO.getName(), userDTO.getId());
+    public void updateUser(UserDTO userDTO) throws UserNotFoundException {
+        UUID id = userDTO.getId();
+        User user = getUserById(id);
+        repository.updateUserName(userDTO.getName(), id);
     }
 
     @Override
-    public User getUserById(UUID id) {
-        return repository.getReferenceById(id);
+    public User getUserById(UUID id) throws UserNotFoundException {
+        Optional<User> userOpt = repository.getUserById(id);
+        return userOpt.orElseThrow(() ->
+                new UserNotFoundException("пользователь с id " + id  + " не найден"));
     }
 }

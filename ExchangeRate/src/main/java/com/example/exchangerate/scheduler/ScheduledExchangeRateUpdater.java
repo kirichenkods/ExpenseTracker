@@ -27,7 +27,6 @@ public class ScheduledExchangeRateUpdater implements ExchangeRateUpdater {
      */
     @Override
     @Scheduled(cron = "0 13 00 * * *", zone = "Europe/Moscow")
-//    @Scheduled(cron = "0 * * * * *", zone = "Europe/Moscow")
     public void updateRates() {
         log.info("=== Обновление курсов валют по расписанию: НАЧАЛО ===");
 

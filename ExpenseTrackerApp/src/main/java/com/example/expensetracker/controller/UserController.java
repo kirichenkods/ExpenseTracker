@@ -1,6 +1,7 @@
 package com.example.expensetracker.controller;
 
 import com.example.expensetracker.dto.UserDTO;
+import com.example.expensetracker.exception.UserNotFoundException;
 import com.example.expensetracker.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/api/v1/users")
 @RequiredArgsConstructor
 @Tag(name = "Управление пользователями")
 public class UserController {
@@ -25,14 +26,15 @@ public class UserController {
         return service.createUser(userDTO);
     }
 
-    @ResponseStatus(HttpStatus.CREATED)
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     @PostMapping("update")
     @Operation(summary = "Обновление пользователя")
-    public void updateUser(@RequestBody @Valid UserDTO userDTO) {
+    public void updateUser(@RequestBody @Valid UserDTO userDTO) throws
+            UserNotFoundException {
         service.updateUser(userDTO);
     }
 
-    @ResponseStatus(HttpStatus.CREATED)
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     @GetMapping("delete/{uuid}")
     @Operation(summary = "Удаление пользователя")
     public void deleteUser(@PathVariable UUID uuid) {
