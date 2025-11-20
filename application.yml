@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: ExpenseTracker
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/currency_db
+    username: curuser
+    password: securpas
+
+exchange_rate_provider:
+  url: https://cbr.ru
+  uri: /scripts/XML_daily.asp?date_req=
