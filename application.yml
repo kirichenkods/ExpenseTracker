@@ -1,12 +1,50 @@
 spring:
   application:
     name: ExpenseTracker
+
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/currency_db
     username: curuser
     password: securpas
 
+  jpa:
+    show-sql: false
+
+  liquibase:
+    change-log: db.changelog/changelog.xml
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      template:
+        default-topic: currency-topic
+    consumer:
+      group-id: currency_group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: com.example.domain.entity
+    topic:
+      name: currency-topic
+    group-id: currency_group
+
 exchange_rate_provider:
   url: https://cbr.ru
   uri: /scripts/XML_daily.asp?date_req=
+
+server:
+  servlet:
+    context-path: /api/v1
+  port: 8080
+
+logging:
+  level:
+    root: info
+  file:
+    name: logs/ExpenseTracker.log
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n"

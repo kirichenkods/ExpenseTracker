@@ -1,0 +1,542 @@
+2025-11-24 23:32:02 INFO  c.e.e.ExpenseTrackerApplication - Starting ExpenseTrackerApplication using Java 21.0.8 with PID 55387 (/home/dmitry/IdeaProjects/globus/ExpenseTracker/ExpenseTrackerApp/target/classes started by dmitry in /home/dmitry/IdeaProjects/globus/ExpenseTracker)
+2025-11-24 23:32:02 INFO  c.e.e.ExpenseTrackerApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-24 23:32:02 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-24 23:32:02 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 3 JPA repository interfaces.
+2025-11-24 23:32:03 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-24 23:32:03 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-24 23:32:03 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-24 23:32:03 INFO  o.a.c.c.C.[.[localhost].[/api/v1] - Initializing Spring embedded WebApplicationContext
+2025-11-24 23:32:03 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1234 ms
+2025-11-24 23:32:03 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-24 23:32:03 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@730bea0
+2025-11-24 23:32:03 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-24 23:32:04 INFO  liquibase.database - Set default schema name to public
+2025-11-24 23:32:04 INFO  liquibase.changelog - Reading from public.databasechangelog
+2025-11-24 23:32:04 INFO  liquibase.ui - Database is up to date, no changesets to execute
+2025-11-24 23:32:04 INFO  liquibase.changelog - Reading from public.databasechangelog
+2025-11-24 23:32:04 INFO  liquibase.util - UPDATE SUMMARY
+2025-11-24 23:32:04 INFO  liquibase.util - Run:                          0
+2025-11-24 23:32:04 INFO  liquibase.util - Previously run:               3
+2025-11-24 23:32:04 INFO  liquibase.util - Filtered out:                 0
+2025-11-24 23:32:04 INFO  liquibase.util - -------------------------------
+2025-11-24 23:32:04 INFO  liquibase.util - Total change sets:            3
+2025-11-24 23:32:04 INFO  liquibase.util - Update summary generated
+2025-11-24 23:32:04 INFO  liquibase.command - Command execution complete
+2025-11-24 23:32:05 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-24 23:32:05 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-24 23:32:05 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-24 23:32:05 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-24 23:32:06 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-24 23:32:06 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-24 23:32:06 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-24 23:32:06 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-24 23:32:07 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-24 23:32:07 INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.controllers = []
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = ExpenseTracker-admin-0
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = true
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2025-11-24 23:32:08 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2025-11-24 23:32:08 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2025-11-24 23:32:08 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1764016328007
+2025-11-24 23:32:08 INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for ExpenseTracker-admin-0 unregistered
+2025-11-24 23:32:08 INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-11-24 23:32:08 INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-11-24 23:32:08 INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-11-24 23:32:08 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api/v1'
+2025-11-24 23:32:08 INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-currency_group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = currency_group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2025-11-24 23:32:08 INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-11-24 23:32:08 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2025-11-24 23:32:08 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2025-11-24 23:32:08 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1764016328443
+2025-11-24 23:32:08 INFO  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=consumer-currency_group-1, groupId=currency_group] Subscribed to topic(s): currency-topic
+2025-11-24 23:32:08 INFO  c.e.e.ExpenseTrackerApplication - Started ExpenseTrackerApplication in 6.498 seconds (process running for 7.545)
+2025-11-24 23:32:08 INFO  c.e.e.s.ScheduledExchangeRateUpdater - === Обновление курсов валют по расписанию: НАЧАЛО ===
+2025-11-24 23:32:08 INFO  c.e.e.provider.WebProviderRestClient - Запрашиваем курсы валют с ЦБ за 24/11/2025
+2025-11-24 23:32:08 INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-currency_group-1, groupId=currency_group] Cluster ID: 5L6g3nShT-eMCtK--X86sw
+2025-11-24 23:32:08 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-currency_group-1, groupId=currency_group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-11-24 23:32:08 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-currency_group-1, groupId=currency_group] (Re-)joining group
+2025-11-24 23:32:08 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-currency_group-1, groupId=currency_group] Request joining group due to: need to re-join with the given member-id: consumer-currency_group-1-f34f1dfd-c8a4-443c-a08a-ffa171f01e4a
+2025-11-24 23:32:08 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-currency_group-1, groupId=currency_group] (Re-)joining group
+2025-11-24 23:32:08 INFO  c.e.e.provider.WebProviderRestClient - Получено: 55 валют
+2025-11-24 23:32:08 INFO  c.e.e.s.ScheduledExchangeRateUpdater - Отправка в кафку
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : AUD
+2025-11-24 23:32:08 INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = ExpenseTracker-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2025-11-24 23:32:08 INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-11-24 23:32:08 INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=ExpenseTracker-producer-1] Instantiated an idempotent producer.
+2025-11-24 23:32:08 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2025-11-24 23:32:08 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2025-11-24 23:32:08 INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1764016328821
+2025-11-24 23:32:08 INFO  org.apache.kafka.clients.Metadata - [Producer clientId=ExpenseTracker-producer-1] Cluster ID: 5L6g3nShT-eMCtK--X86sw
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : AZN
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : DZD
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : GBP
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : AMD
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : BHD
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : BYN
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : BGN
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : BOB
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : BRL
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : HUF
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : VND
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : HKD
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : GEL
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : DKK
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : AED
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : USD
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : EUR
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : EGP
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : INR
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : IDR
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : IRR
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : KZT
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : CAD
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : QAR
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : KGS
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : CNY
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : CUP
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : MDL
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : MNT
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : NGN
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : NZD
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : NOK
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : OMR
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : PLN
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : SAR
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : RON
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : XDR
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : SGD
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : TJS
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : THB
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : BDT
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : TRY
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : TMT
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : UZS
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : UAH
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : CZK
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : SEK
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : CHF
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : ETB
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : RSD
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : ZAR
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : KRW
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : JPY
+2025-11-24 23:32:08 INFO  c.example.kafkaproducer.KafkaSender - Sending to kafka : MMK
+2025-11-24 23:32:08 INFO  c.e.e.s.ScheduledExchangeRateUpdater - === Обновление курсов валют: КОНЕЦ ===
+2025-11-24 23:32:08 INFO  c.e.e.s.FakeScheduledExchangeRateUpdater - Обновляю курсы валют
+2025-11-24 23:32:08 INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=ExpenseTracker-producer-1] ProducerId set to 5000 with epoch 0
+2025-11-24 23:32:11 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-currency_group-1, groupId=currency_group] Successfully joined group with generation Generation{generationId=23, memberId='consumer-currency_group-1-f34f1dfd-c8a4-443c-a08a-ffa171f01e4a', protocol='range'}
+2025-11-24 23:32:11 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-currency_group-1, groupId=currency_group] Finished assignment for group at generation 23: {consumer-currency_group-1-f34f1dfd-c8a4-443c-a08a-ffa171f01e4a=Assignment(partitions=[currency-topic-0])}
+2025-11-24 23:32:11 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-currency_group-1, groupId=currency_group] Successfully synced group in generation Generation{generationId=23, memberId='consumer-currency_group-1-f34f1dfd-c8a4-443c-a08a-ffa171f01e4a', protocol='range'}
+2025-11-24 23:32:11 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-currency_group-1, groupId=currency_group] Notifying assignor about the new Assignment(partitions=[currency-topic-0])
+2025-11-24 23:32:11 INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-currency_group-1, groupId=currency_group] Adding newly assigned partitions: currency-topic-0
+2025-11-24 23:32:11 INFO  o.a.k.c.c.internals.ConsumerUtils - Setting offset for partition currency-topic-0 to the committed offset FetchPosition{offset=550, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=4}}
+2025-11-24 23:32:11 INFO  o.s.k.l.KafkaMessageListenerContainer - currency_group: partitions assigned: [currency-topic-0]
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: AUD
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: AZN
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: DZD
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: GBP
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: AMD
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: BHD
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: BYN
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: BGN
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: BOB
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: BRL
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: HUF
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: VND
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: HKD
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: GEL
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: DKK
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: AED
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: USD
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: EUR
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: EGP
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: INR
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: IDR
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: IRR
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: KZT
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: CAD
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: QAR
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: KGS
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: CNY
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: CUP
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: MDL
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: MNT
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: NGN
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: NZD
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: NOK
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: OMR
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: PLN
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: SAR
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: RON
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: XDR
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: SGD
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: TJS
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: THB
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: BDT
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: TRY
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: TMT
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: UZS
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: UAH
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: CZK
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: SEK
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: CHF
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: ETB
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: RSD
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: ZAR
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: KRW
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: JPY
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:11 INFO  c.e.k.CurrencyKafkaListener - Received rate: MMK
+2025-11-24 23:32:11 INFO  c.e.e.CurrencyRateHandlerImpl - save rate
+2025-11-24 23:32:23 INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=consumer-currency_group-1, groupId=currency_group] Revoke previously assigned partitions currency-topic-0
+2025-11-24 23:32:23 INFO  o.s.k.l.KafkaMessageListenerContainer - currency_group: partitions revoked: [currency-topic-0]
+2025-11-24 23:32:23 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-currency_group-1, groupId=currency_group] Member consumer-currency_group-1-f34f1dfd-c8a4-443c-a08a-ffa171f01e4a sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2025-11-24 23:32:23 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-currency_group-1, groupId=currency_group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-11-24 23:32:23 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-currency_group-1, groupId=currency_group] Request joining group due to: consumer pro-actively leaving the group
+2025-11-24 23:32:23 INFO  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=consumer-currency_group-1, groupId=currency_group] Unsubscribed all topics or patterns and assigned partitions
+2025-11-24 23:32:23 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-currency_group-1, groupId=currency_group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-11-24 23:32:23 INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-currency_group-1, groupId=currency_group] Request joining group due to: consumer pro-actively leaving the group
+2025-11-24 23:32:23 INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-11-24 23:32:23 INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-11-24 23:32:23 INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-11-24 23:32:23 INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-11-24 23:32:23 INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-currency_group-1 unregistered
+2025-11-24 23:32:23 INFO  o.s.k.l.KafkaMessageListenerContainer - currency_group: Consumer stopped
+2025-11-24 23:32:23 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-24 23:32:23 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-24 23:32:23 INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=ExpenseTracker-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2025-11-24 23:32:23 INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-11-24 23:32:23 INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-11-24 23:32:23 INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-11-24 23:32:23 INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-11-24 23:32:23 INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.producer for ExpenseTracker-producer-1 unregistered
+2025-11-24 23:32:23 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-24 23:32:23 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-24 23:32:23 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

@@ -1,5 +1,6 @@
 package com.example.expensetracker.controller;
 
+import com.example.expensetracker.exception.CurrencyRateNotFoundException;
 import com.example.expensetracker.exception.UserNotFoundException;
 import com.example.expensetracker.service.BalanceService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/api/v1/balance")
+@RequestMapping("/balance")
 @RequiredArgsConstructor
 @Tag(name = "Получение информации о разнице между внесенными доходами и расходами")
 public class BalanceController {
@@ -26,7 +27,7 @@ public class BalanceController {
     @ResponseStatus(HttpStatus.OK)
     public double getBalance(@PathVariable @NotNull UUID uuid,
                              @PathVariable @NotNull String charCode)
-            throws UserNotFoundException {
+            throws UserNotFoundException, CurrencyRateNotFoundException {
         return service.getBalance(uuid, charCode);
     }
 

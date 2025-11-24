@@ -1,7 +1,8 @@
 package com.example.expensetracker.service;
 
-import com.example.exchangerate.entity.CurrencyRate;
-import com.example.exchangerate.service.CurrencyService;
+
+import com.example.domain.entity.CurrencyRate;
+import com.example.expensetracker.exception.CurrencyRateNotFoundException;
 import com.example.expensetracker.exception.UserNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -41,7 +42,8 @@ public class BalanceServiceImpl implements BalanceService {
      * @throws UserNotFoundException если пользователь с данным ID не найден
      */
     @Override
-    public double getBalance(UUID userId, String charCode) throws UserNotFoundException {
+    public double getBalance(UUID userId, String charCode) throws UserNotFoundException,
+            CurrencyRateNotFoundException {
         CurrencyRate rate = currencyService.getRateByCharCode(charCode);
         double balance = getBalance(userId);
         return rate.getUnitRate() * balance;

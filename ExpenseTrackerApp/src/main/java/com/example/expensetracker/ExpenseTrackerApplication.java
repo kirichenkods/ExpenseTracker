@@ -8,15 +8,17 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication(scanBasePackages = {
         "com.example.expensetracker",
-        "com.example.exchangerate"
+        "com.example.exchangerate",
+        "com.example.domain",
+        "com.example.kafkaproducer",
+        "com.example.kafkaconsumer"
 })
 @EnableJpaRepositories(basePackages = {
-        "com.example.exchangerate.repository",
         "com.example.expensetracker.repository"
 })
 @EntityScan(basePackages = {
-        "com.example.exchangerate.entity",
-        "com.example.expensetracker.entity"
+        "com.example.expensetracker.entity",
+        "com.example.domain.entity"
 })
 @EnableScheduling
 public class ExpenseTrackerApplication {
