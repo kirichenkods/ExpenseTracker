@@ -1,7 +1,7 @@
 package com.example.exchangerate.mapper;
 
+import com.example.domain.entity.CurrencyRate;
 import com.example.exchangerate.dto.ValCursDto;
-import com.example.exchangerate.entity.CurrencyRate;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;

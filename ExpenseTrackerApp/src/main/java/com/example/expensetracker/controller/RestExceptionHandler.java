@@ -1,5 +1,6 @@
 package com.example.expensetracker.controller;
 
+import com.example.expensetracker.exception.CurrencyRateNotFoundException;
 import com.example.expensetracker.exception.OperationNotFoundException;
 import com.example.expensetracker.exception.UserNotFoundException;
 import jakarta.validation.ConstraintViolationException;
@@ -42,11 +43,21 @@ public class RestExceptionHandler {
 
     @ExceptionHandler(UserNotFoundException.class)
     public ResponseEntity<String> handleUserNotFoundException(UserNotFoundException e) {
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+        return handleCustomException(e);
     }
 
     @ExceptionHandler(OperationNotFoundException.class)
     public ResponseEntity<String> handleOperationNotFoundException(OperationNotFoundException e) {
+        return handleCustomException(e);
+    }
+
+
+    @ExceptionHandler(CurrencyRateNotFoundException.class)
+    public ResponseEntity<String> handleCurrencyRateNotFoundException(CurrencyRateNotFoundException e) {
+        return handleCustomException(e);
+    }
+
+    private ResponseEntity<String> handleCustomException(Exception e) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
     }
 }

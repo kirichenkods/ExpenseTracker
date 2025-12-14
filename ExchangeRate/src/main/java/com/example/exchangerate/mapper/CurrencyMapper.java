@@ -1,7 +1,8 @@
 package com.example.exchangerate.mapper;
 
+import com.example.domain.entity.CurrencyRate;
 import com.example.exchangerate.dto.ValCursDto;
-import com.example.exchangerate.entity.CurrencyRate;
+
 
 import java.util.List;
 
